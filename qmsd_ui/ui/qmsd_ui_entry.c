@@ -59,7 +59,9 @@ void g_show_kb()
 
 qmsd_img_t g_qmsd_img[] = 
 {
-    };
+        {"imgabstron_logo_jpeg",&imgabstron_logo_jpeg},
+    {"imglinux_logo_png",&imglinux_logo_png},
+};
 
 qmsd_font_t g_qmsd_font[] =
 {

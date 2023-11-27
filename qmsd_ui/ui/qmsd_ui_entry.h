@@ -13,12 +13,14 @@ extern "C" {
 #include "qmsd_gui.h"
 LV_FONT_DECLARE(ali_font_16);
 
+LV_IMG_DECLARE(imgabstron_logo_jpeg);
+LV_IMG_DECLARE(imglinux_logo_png);
 
 /*
 * declear screen_main
 */
 extern lv_obj_t * screen_main;
-extern lv_obj_t * calendar_HpK4;
+extern lv_obj_t * image_0kR4;
 void screen_main_build(void);
 void screen_main_show(void);
 void screen_main_delete(void);

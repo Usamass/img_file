@@ -2,21 +2,23 @@
 #include "qmsd_internal_ui_cb.h"
 
 lv_obj_t* screen_main;
-lv_obj_t* calendar_HpK4;
+lv_obj_t* image_0kR4;
 
 
-    void qmsd_calendar_HpK4_create()
+    
+void qmsd_image_0kR4_create()
 {
-    calendar_HpK4 = lv_calendar_create(screen_main, NULL);
-    lv_obj_set_size(calendar_HpK4, 240, 300);
-    lv_obj_set_pos(calendar_HpK4, 31, 11);
-    lv_calendar_date_t calendar_HpK4_today;
-    calendar_HpK4_today.year = 2020;
-    calendar_HpK4_today.month = 1;
-    calendar_HpK4_today.day = 1;
-    lv_calendar_set_today_date(calendar_HpK4, &calendar_HpK4_today);
-    lv_calendar_set_showed_date(calendar_HpK4, &calendar_HpK4_today);
-    qmsd_obj_set_id(calendar_HpK4,"calendar_HpK4");
+    image_0kR4 = lv_img_create(screen_main, NULL);
+    lv_obj_set_style_local_image_opa(image_0kR4,LV_IMG_PART_MAIN,LV_STATE_DEFAULT,255);
+    lv_img_set_src(image_0kR4, &imgabstron_logo_jpeg);
+#ifdef BLOCKLY_image_0kR4_EVENT_HANDLER
+    lv_obj_set_event_cb(image_0kR4, __qmsd_image_0kR4_cb);
+#endif
+    lv_obj_set_pos(image_0kR4, 88, 91);
+    lv_obj_set_click(image_0kR4,false);
+    lv_obj_set_style_local_image_recolor(image_0kR4,LV_IMG_PART_MAIN,LV_STATE_PRESSED,LV_COLOR_BLACK);
+    lv_obj_set_style_local_image_recolor_opa(image_0kR4,LV_IMG_PART_MAIN,LV_STATE_PRESSED,60);
+    qmsd_obj_set_id(image_0kR4,"image_0kR4");
 }
 
 static void screen_main_qmsd_cb(lv_obj_t * obj, lv_event_t event, void *data)
@@ -43,7 +45,7 @@ void screen_main_build(void)
     screen_main = lv_obj_create(NULL, NULL);
     lv_obj_qmsd_set_cb(screen_main, screen_main_qmsd_cb);
 
-    qmsd_calendar_HpK4_create();
+    qmsd_image_0kR4_create();
     lv_obj_set_event_cb(screen_main,screen_main_del_cb);
     qmsd_screen_register(screen_main,"screen_main");
 }
