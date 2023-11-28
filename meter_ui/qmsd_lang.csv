@@ -1,0 +1,19 @@
+# Sample csv file
+key,type,encoding,value
+zh_cn,namespace,,
+lab_ma_min,data,string,00
+lab_ma_scr,data,string,:
+lab_ma_hour,data,string,13
+but_set_temp,data,string,temperature
+but_set_time,data,string,time
+lab_set_mode,data,string,Meter
+lab_set_sign,data,string,km/h
+lab_run_sign,data,string,time left
+lab_run_mode,data,string,steam
+but_run_run,data,string,running
+lab_run_hour,data,string,03
+lab_run_min,data,string,30
+lab_run_scr,data,string,:
+label_78,data,string,0123456789
+label_82,data,string,0123456789
+lab_dd89,data,string,蒸烤空气炸烘烤炖汤果干
